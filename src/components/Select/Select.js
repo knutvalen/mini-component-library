@@ -15,12 +15,15 @@ const Select = ({ label, value, onChange, children }) => {
         </NativeSelect>
         <PresentationalBit>
             {displayedValue}
-            <IconWrapper style={{ '--size': 24 + 'px' }}>
+            <IconWrapper
+              style={{
+                '--size': 24 + 'px'
+              }}
+            >
                 <Icon id='chevron-down' size={24} strokeWidth={1} />
             </IconWrapper>
         </PresentationalBit>
       </Wrapper>
-
   );
 };
 
@@ -44,7 +47,6 @@ const PresentationalBit = styled.div`
   background-color: ${COLORS.transparentGray15};
   font-family: 'Roboto', sans-serif;
   font-size: ${16 / 16}rem;
-  font-style: normal;
   font-weight: 400;
   padding: 12px 52px 12px 16px;
   border-radius: 8px;

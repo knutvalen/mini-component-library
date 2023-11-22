@@ -6,23 +6,6 @@ import { COLORS } from '../../constants';
 import Icon from '../Icon';
 import VisuallyHidden from '../VisuallyHidden';
 
-const SIZE = {
-  small: {
-    borderBottomLineWidth: 1,
-    fontSize: 14,
-    iconSize: 16,
-    height: 24,
-    paddingLeft: 24,
-  },
-  large: {
-    borderBottomLineWidth: 2,
-    fontSize: 18,
-    iconSize: 24,
-    height: 36,
-    paddingLeft: 36,
-  },
-}
-
 const IconInput = ({
   label,
   icon,
@@ -39,10 +22,13 @@ const IconInput = ({
   return (
       <Wrapper>
         <VisuallyHidden>{label}</VisuallyHidden>
-        <IconWrapper style={{ '--size': style.iconSize + 'px' }}>
+        <IconWrapper
+          style={{
+            '--size': style.iconSize + 'px'
+          }}
+        >
           <Icon id={icon} size={style.iconSize} strokeWidth={1} />
         </IconWrapper>
-
         <TextInput
             type="text"
             style={{
@@ -57,6 +43,23 @@ const IconInput = ({
       </Wrapper>
   );
 };
+
+const SIZE = {
+  small: {
+    borderBottomLineWidth: 1,
+    fontSize: 14,
+    iconSize: 16,
+    height: 24,
+    paddingLeft: 24,
+  },
+  large: {
+    borderBottomLineWidth: 2,
+    fontSize: 18,
+    iconSize: 24,
+    height: 36,
+    paddingLeft: 36,
+  },
+}
 
 const Wrapper = styled.label`
   position: relative;
